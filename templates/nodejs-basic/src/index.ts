@@ -6,6 +6,8 @@ import info from "./routes/info";
 const app = express();
 
 app.use(morgan("combined", { stream }));
+
+app.use(express.json())
 app.use(info);
 
 export default app;
