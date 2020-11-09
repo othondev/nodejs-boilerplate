@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "allowJs": false,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "incremental": true,
+    "lib": ["es6"],
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "outDir": "build",
+    "resolveJsonModule": true,
+    "rootDirs": ["src", "bin", "config"],
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "es5"
+  }
+}
