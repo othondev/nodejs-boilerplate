@@ -10,6 +10,7 @@
     "start": "echo \"Error: no test specified\" && exit 1",
     "start:dev": "nodemon --config config/nodemon.json",
     "build": "tsc",
+    "lint": "tslint -c config/tslint.json --project ./",
     "test": "jest --config config/jest.config.ts --runInBand ",
     "test:watch": "jest --config config/jest.config.ts --runInBand --watch"
   },

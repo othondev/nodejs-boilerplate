@@ -20,7 +20,7 @@ const logger = winston.createLogger({
         winston.format.colorize({ all: true }),
         winston.format.simple()
       ),
-    })
+    }),
   ],
 });
 

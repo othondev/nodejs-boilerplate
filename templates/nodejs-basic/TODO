@@ -1,6 +1,6 @@
 [x] Added jest library
 [x] Create healthcheck test file
-[ ] Create lint script
+[x] Create lint script
 [ ] Create build script
 [x] Create test script
 [ ] Swagger integration

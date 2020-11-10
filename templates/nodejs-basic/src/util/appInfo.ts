@@ -1,23 +1,23 @@
-import { version, author } from "../../package.json";
+import { author, version } from "../../package.json";
 const { NODE_ENV = "dev" } = process.env;
 
-interface ApplicationInfo {
-  uptime: Number;
-  timestamp: Number;
+interface IApplicationInfo {
+  uptime: number;
+  timestamp: number;
   info: {
     author: string;
     environment: string;
     version: string;
   };
 }
-export function getApplicationInfo(): ApplicationInfo {
+export function getApplicationInfo(): IApplicationInfo {
   return {
-    uptime: process.uptime(),
-    timestamp: Date.now(),
     info: {
       author,
       environment: NODE_ENV,
       version,
     },
+    timestamp: Date.now(),
+    uptime: process.uptime(),
   };
 }
