@@ -3,6 +3,6 @@
 [x] Create lint script
 [x] Create build script
 [x] Create test script
-[ ] Error Handler
+[x] Error Handler
 [ ] Swagger integration
 [ ] Docker file
