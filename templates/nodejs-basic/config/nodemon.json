@@ -2,5 +2,5 @@
   "watch": ["src","bin"],
   "ext": ".ts,.js",
   "ignore": [],
-  "exec": "ts-node -r dotenv/config ./bin/server.ts"
+  "exec": "ts-node -r dotenv/config -r tsconfig-paths/register ./bin/server.ts"
 }

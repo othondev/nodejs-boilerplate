@@ -18,9 +18,9 @@ Templates created to nodejs projects.
     ├── bin                     # Executable files
     ├── config                  # Configuration files
     ├── dist                    # Compiled files
-    ├── env                     # Environment files
     ├── docs                    # Documentation files
     ├── src                     # Source files
+    │   ├── handlers            # Handler Files
     │   ├── routes              # Routes Files
     │   ├── middlewares         # Middleware files
     │   └── app.ts              # Server configuration file
@@ -39,3 +39,4 @@ Templates created to nodejs projects.
 
 # References
 - [ How to Setup a TypeScript + Node.js Project. ](https://khalilstemmler.com/blogs/typescript/node-starter-project/)
+- [ Error Handling ](https://expressjs.com/en/guide/error-handling.html)

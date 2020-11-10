@@ -1,7 +1,7 @@
 import { author, version } from "../../package.json";
 const { NODE_ENV = "dev" } = process.env;
 
-interface IApplicationInfo {
+export interface IApplicationInfo {
   uptime: number;
   timestamp: number;
   info: {

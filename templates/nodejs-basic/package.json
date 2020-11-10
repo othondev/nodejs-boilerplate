@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "start": "echo \"Error: no test specified\" && exit 1",
+    "start": "node -r ts-node/register/transpile-only -r tsconfig-paths/register build/index.js",
     "start:dev": "nodemon --config config/nodemon.json",
     "build": "tsc",
     "lint": "tslint -c config/tslint.json --project ./",
@@ -27,6 +27,7 @@
     "supertest": "^6.0.1",
     "ts-jest": "^26.4.4",
     "ts-node": "^9.0.0",
+    "tsconfig-paths": "^3.9.0",
     "tslint": "^6.1.3",
     "typescript": "^4.0.5"
   },

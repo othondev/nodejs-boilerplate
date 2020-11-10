@@ -1,5 +1,5 @@
 import express, { Request, Response } from "express";
-import { getApplicationInfo } from "../util/appInfo"
+import { getApplicationInfo } from "core/util/appInfo"
 
 const router = express.Router();
 

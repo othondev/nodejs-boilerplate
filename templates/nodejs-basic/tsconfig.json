@@ -12,6 +12,12 @@
     "rootDirs": ["src", "bin", "config"],
     "skipLibCheck": true,
     "strict": true,
-    "target": "es5"
+    "target": "es5",
+    "baseUrl": ".",
+    "paths": {
+      "core/*": ["src/*"],
+      "config/*": ["config/*"],
+      "test/*": ["test/*"]
+    }
   }
 }
