@@ -1,13 +1,14 @@
-import winston from "winston";
+import winston, { format } from "winston";
 import { name } from "../package.json";
 
 const { logLevel: level = "info" } = process.env;
 const FIVE_MB = 5242880;
 
 const logger = winston.createLogger({
-  format: winston.format.combine(
-    winston.format.timestamp(),
-    winston.format.json()
+  format: format.combine(
+    format.errors({ stack: true }),
+    format.timestamp(),
+    format.json()
   ),
   level,
   transports: [
@@ -17,8 +18,8 @@ const logger = winston.createLogger({
     }),
     new winston.transports.Console({
       format: winston.format.combine(
-        winston.format.colorize({ all: true }),
-        winston.format.simple()
+        format.colorize({ all: true }),
+        format.simple()
       ),
     }),
   ],
