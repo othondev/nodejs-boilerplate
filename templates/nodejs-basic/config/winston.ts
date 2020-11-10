@@ -1,12 +1,12 @@
 import winston, { format } from "winston";
 import { name } from "../package.json";
 
-const { logLevel: level = "info" } = process.env;
+const { LOG: level = "info" } = process.env;
 const FIVE_MB = 5242880;
 
 const logger = winston.createLogger({
   format: format.combine(
-    format.errors({ stack: true }),
+    format.errors({ stack: level === "debug" }),
     format.timestamp(),
     format.json()
   ),

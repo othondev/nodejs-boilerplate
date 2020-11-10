@@ -18,17 +18,21 @@ export function clientErrorHandler(
   next: NextFunction
 ) {
   if (request.xhr) {
-    response.status(500).send({ error: "An Unexpected Error Occurred" });
+    response
+      .status(500)
+      .send({ message: "Sorry, Something wrong!!! Try again later" });
   } else {
     next(error);
   }
 }
 
 export function errorHandler(
-  error: ErrorRequestHandler,
+  _error: ErrorRequestHandler,
   _request: Request,
   response: Response,
   _next: NextFunction
 ) {
-  response.status(500).send({ error });
+  response.status(500).send({
+    error: "An Unexpected Error Occurred",
+  });
 }
