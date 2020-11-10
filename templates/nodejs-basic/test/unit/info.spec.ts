@@ -1,19 +1,7 @@
 import supertest from "supertest";
-import app from "core/index";
 import { version, author } from "../../package.json";
-import * as errorHandler from "core/handlers/error";
-import * as appInfo from "core/util/appInfo";
-
+import app from "core/index";
 const request = supertest(app);
-
-test("Should call errors handlers", async () => {
-
-  await request.get("/healthcheck");
-
-  const errorHandlersSpy = spyOn(errorHandler, "clientErrorHandler");
-
-  expect(errorHandlersSpy).toHaveBeenCalledTimes(1);
-});
 
 test("/GET healthcheck", async () => {
   const response = await request.get("/healthcheck");
