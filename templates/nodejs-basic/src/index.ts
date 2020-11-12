@@ -2,7 +2,7 @@ import express from "express";
 import morgan from "morgan";
 import cookieParser from "cookie-parser";
 import { stream } from "config/winston";
-import infoRoute from "core/routes/info";
+import routes from "core/routes";
 import {
   clientErrorHandler,
   errorHandler,
@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-app.use(infoRoute);
+app.use(routes);
 
 app.use(logErrors);
 app.use(clientErrorHandler);
