@@ -1,8 +1,9 @@
 import winston, { format } from "winston";
 import { name } from "../package.json";
 
-const { LOG: level = "info" } = process.env;
-const FIVE_MB = 5242880;
+const { LOG: level = "info", LOG_MAXSIZE_MB = 1 } = process.env;
+
+const maxsize = 1e+6 * (LOG_MAXSIZE_MB as number);
 
 const logger = winston.createLogger({
   format: format.combine(
@@ -14,7 +15,7 @@ const logger = winston.createLogger({
   transports: [
     new winston.transports.File({
       filename: `logs/${name}.log`,
-      maxsize: FIVE_MB,
+      maxsize,
     }),
     new winston.transports.Console({
       format: winston.format.combine(
