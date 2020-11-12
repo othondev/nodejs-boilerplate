@@ -3,7 +3,7 @@ import { name } from "../package.json";
 
 const { LOG: level = "info", LOG_MAXSIZE_MB = 1 } = process.env;
 
-const maxsize = 1e+6 * (LOG_MAXSIZE_MB as number);
+const maxsize = 1e6 * (LOG_MAXSIZE_MB as number);
 
 const logger = winston.createLogger({
   format: format.combine(
