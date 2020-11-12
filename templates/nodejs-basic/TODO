@@ -6,4 +6,5 @@
 [x] Error Handler
 [x] Create env variable to log file size.
 [ ] Swagger integration
-[ ] Docker file
+[-] Docker file
+[x] Node.JS debug config
