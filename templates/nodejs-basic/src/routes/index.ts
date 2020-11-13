@@ -15,9 +15,7 @@ const router = express.Router();
  *       200:
  *         description: healthcheck
  *         schema:
- *           type: object
- *           items:
- *             $ref: '#/definitions/Info'
+ *           $ref: '#/definitions/Info'
  */
 router.use("/healthcheck", infoRoute);
 
