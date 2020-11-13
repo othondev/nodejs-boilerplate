@@ -6,6 +6,6 @@ import swaggerUi from "swagger-ui-express";
 const router = express.Router();
 const swaggerSpec = swaggerJSDoc(swaggerOption);
 
-router.get("/docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+router.use("/docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 export default router;
