@@ -1,5 +1,6 @@
 #!/usr/bin/env node
-const { copy } = require("fs-extra");
+const { copySync } = require("fs-extra");
+const { writeFileSync, readFileSync } = require("fs");
 
 const { basename } = require("path");
 const { userInfo } = require("os");
@@ -38,16 +39,23 @@ require("yargs").command(
   },
   (argv) => {
     const { author, projectName, path, template } = argv;
-    const replace = {
-      __PROJECT_NAME__: projectName,
-      __USER_NAME__: author,
-    };
-    const dst = `${__dirname}/../templates/${template}`
-    const src =  `${path}/${projectName}`
+    const src = `${__dirname}/../templates/${template}`;
+    const dst = `${path}/${projectName}`;
 
-    copy(dst,src)
-    console.log({dst,src})
-
-    console.log({argv});
+    copySync(src, dst);
+    replaceFiles(author, projectName, dst);
   }
 ).argv;
+
+function replaceFiles(author, projectName, dst) {
+  const files = [`${dst}/README.md`, `${dst}/package.json`];
+  const option = { encoding: "utf8" };
+  for (file of files) {
+    const text = readFileSync(file, option);
+    const newFile = text
+      .replace(/__PROJECT_NAME__/g, projectName)
+      .replace(/__USER_NAME__/g, author);
+    console.log({ text, newFile, file });
+    writeFileSync(file, newFile, option);
+  }
+}
