@@ -5,6 +5,6 @@
 [x] Create test script
 [x] Error Handler
 [x] Create env variable to log file size.
-[ ] Swagger integration
+[x] Swagger integration
 [-] Docker file
 [x] Node.JS debug config
