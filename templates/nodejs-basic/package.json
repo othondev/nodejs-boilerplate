@@ -1,6 +1,6 @@
 {
-  "name": "__PROJECT_NAME",
-  "description": "__PROJECT_DESCRIPTION",
+  "name": "__PROJECT_NAME__",
+  "description": "Default description project",
   "version": "1.0.0",
   "directories": {
     "doc": "docs",
@@ -14,7 +14,7 @@
     "test": "jest --config config/jest.config.ts --runInBand ",
     "test:watch": "jest --config config/jest.config.ts --runInBand --watch"
   },
-  "author": "__USER_NAME",
+  "author": "__USER_NAME__",
   "devDependencies": {
     "@types/cookie-parser": "^1.4.2",
     "@types/express": "^4.17.8",
