@@ -17,8 +17,8 @@ Options:
   --help      Show help                                            [boolean]
   --version   Show version number                                  [boolean]
   -p, --path      path where the project will be generated
-  [default: "/home/othon/workspace/nodejs-boilerplate"]
-  -a, --author    Author name                        [string] [default: "othon"]
+  [default: "<CURRENT_FOLDER>"]
+  -a, --author    Author name                        [string] [default: "<USER>"]
   -t, --template  Template name               [string] [default: "nodejs-basic"]
   -f, --force     Override all files and folder       [boolean] [default: false]
 ```
