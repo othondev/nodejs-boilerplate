@@ -24,6 +24,6 @@ Options:
 ```
 
 ## References
-[7 libraries to build Node. js CLI](https://yvonnickfrin.dev/seven-libraries-to-build-nodejs-cli/).
-[How to Setup a TypeScript + Node.js Project](https://khalilstemmler.com/blogs/typescript/node-starter-project/).
+- [7 libraries to build Node. js CLI](https://yvonnickfrin.dev/seven-libraries-to-build-nodejs-cli/).
+- [How to Setup a TypeScript + Node.js Project](https://khalilstemmler.com/blogs/typescript/node-starter-project/).
 
