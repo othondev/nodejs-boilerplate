@@ -8,6 +8,8 @@
   },
   "dependencies": {
     "fs-extra": "^9.0.1",
+    "prompts": "^2.4.0",
+    "signale": "^1.4.0",
     "yargs": "^16.1.1"
   },
   "devDependencies": {},
