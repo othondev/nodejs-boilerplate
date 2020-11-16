@@ -1,9 +1,23 @@
 # __PROJECT_NAME__
+==================
+Default description project
 
-# Project script
-Using npm or yarn to run the scripts.
+## Build project
+Transpile the typescript project to Node.JS project in build folder.
+''' npm run build '''
 
 ## Developer mode
 ''' npm run start:dev '''
-or
+> or
 ''' yarn run start:dev '''
+
+## Production mode
+''' npm start '''
+
+## Run lint check
+''' npm run lint '''
+
+## Run tests
+''' npm test '''
+> or in watch mode
+''' npm run test:watch '''

@@ -1,5 +1,5 @@
-[ ] Create force cli parameters
-[ ] Refactory the cli README
-[ ] Refactory the generate project README
+[x] Create force cli parameters
+[x] Refactory the cli README
+[x] Refactory the generate project README
 [ ] Create tests to cli script
 [ ] Create github pipeline
