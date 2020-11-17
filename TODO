@@ -1,6 +1,6 @@
 [x] Create force cli parameters
 [x] Refactory the cli README
 [x] Refactory the generate project README
-[ ] Create tests to cli script
-[ ] Create github pipeline
+[x] Create tests to cli script
+[x] Create github pipeline
 [ ] Add the package to Npm or similar.
