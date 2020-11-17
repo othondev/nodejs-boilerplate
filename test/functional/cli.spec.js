@@ -22,7 +22,6 @@ test("copy all files", async () => {
   const files = fs.readdirSync(`${WORKDIR}/${APP_NAME}`);
   expect(files).toEqual(
     expect.arrayContaining([
-      ".env",
       ".gitignore",
       "README.md",
       "bin",
