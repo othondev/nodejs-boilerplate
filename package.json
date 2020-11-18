@@ -1,5 +1,5 @@
 {
-  "name": "nodejs-boilerplate",
+  "name": "@othon/node-gen",
   "version": "1.0.0",
   "description": "Generate node.js project script ",
   "main": "index.js",
@@ -24,10 +24,13 @@
     "url": "git+https://github.com/othondev/nodejs-boilerplate.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Othon Ferreira",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/othondev/nodejs-boilerplate/issues"
   },
-  "homepage": "https://github.com/othondev/nodejs-boilerplate#readme"
+  "homepage": "https://github.com/othondev/nodejs-boilerplate#readme",
+  "directories": {
+    "test": "test"
+  }
 }

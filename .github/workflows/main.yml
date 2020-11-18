@@ -7,8 +7,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - id: test
       - uses: actions/checkout@v1
       - name: Install dependencies and run tests
         run: |
           npm install
           npm test
+
+      - id: publish
+      - uses: actions/checkout@v1
+      - name: Publish package
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          npm publish
