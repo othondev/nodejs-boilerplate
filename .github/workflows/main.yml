@@ -6,10 +6,11 @@ jobs:
   install-dependencies:
     runs-on: ubuntu-latest
     steps:
-      - id: test
+      - id: install-dependencies
       - uses: actions/checkout@v1
       - name: Install dependencies
-        run: npm install
+        run: |
+          npm install
 
   test:
     runs-on: ubuntu-latest
@@ -18,7 +19,8 @@ jobs:
       - id: test
       - uses: actions/checkout@v1
       - name: Run the tests
-        run: npm test
+        run: |
+          npm test
 
   deploy:
     runs-on: ubuntu-latest
