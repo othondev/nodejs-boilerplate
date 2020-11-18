@@ -30,12 +30,15 @@ jobs:
 
     - name: Test
       run: npm test
-      
+
+    - name: Increase version
+      run: npm version patch
+
     - name: Publish
       run: |
         echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}'>.npmrc
         npm publish --access=public
       if: github.ref == 'refs/heads/master'
-      env: 
+      env:
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
