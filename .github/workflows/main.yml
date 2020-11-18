@@ -6,7 +6,6 @@ jobs:
   install-dependencies:
     runs-on: ubuntu-latest
     steps:
-      - id: install-dependencies
       - uses: actions/checkout@v1
         name: Install dependencies
         run: |
@@ -16,7 +15,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: install-dependencies
     steps:
-      - id: test
       - uses: actions/checkout@v1
         name: Run the tests
         run: |
@@ -26,7 +24,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: tests
     steps:
-      - id: publish
       - uses: actions/checkout@v1
         name: Publish package
         if: github.ref == 'refs/heads/master'
