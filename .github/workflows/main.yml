@@ -32,7 +32,7 @@ jobs:
       run: npm test
       
     - name: Publish
-      run: npm publish
+      run: npm publish --access=public
       if: github.ref == 'refs/heads/master'
       env: 
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
