@@ -31,8 +31,12 @@ jobs:
     - name: Test
       run: npm test
 
-    - name: Increase version
-      run: npm version patch
+    - name:  'Automated Version Bump'
+      uses:  'phips28/gh-action-bump-version@master'
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag-prefix:  ''
 
     - name: Publish
       run: |
