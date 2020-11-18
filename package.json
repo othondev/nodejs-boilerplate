@@ -1,6 +1,6 @@
 {
   "name": "@othon/node-gen",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Generate node.js project script ",
   "main": "index.js",
   "bin": {
