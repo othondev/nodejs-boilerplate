@@ -30,3 +30,10 @@ jobs:
 
     - name: Test
       run: npm test
+      
+    - name: Publish
+      run: npm publish
+      if: github.ref == 'refs/heads/master'
+      env: 
+        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
